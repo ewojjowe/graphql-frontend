@@ -1,0 +1,6 @@
+src/static/**/*
+*.spec.js
+*.spec.jsx
+*.test.js
+*.test.jsx
+src/serviceWorker.js
