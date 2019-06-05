@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "enzyme-adapter-react-16": "^1.14.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
@@ -13,7 +14,7 @@
     "build": "react-scripts build",
     "lint:file": "./node_modules/.bin/eslint",
     "test": "react-scripts test --env=jsdom",
-    "test:staged": "cross-env CI=true react-scripts test --env=jsdom --findRelatedTests",
+    "test:staged": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --findRelatedTests",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -32,10 +33,18 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
     "cross-env": "^5.2.0",
+    "enzyme": "^3.10.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
     "husky": "^2.3.0",

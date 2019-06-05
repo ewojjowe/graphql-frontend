@@ -1,12 +1,35 @@
 module.exports = {
-  "extends": "airbnb",
-  "parser": "babel-eslint",
-  "env":
+  'extends': ['eslint:recommended', 'airbnb-base', 'plugin:jest/recommended'],
+  'parser': 'babel-eslint',
+  'env':
     {
-      "node": true,
-      "es6": true,
-      "browser": true
+      'node': true,
+      'es6': true,
+      'browser': true
     },
+    'settings': {
+    'import/resolver': {
+      'node': {
+        'extensions': [
+          '.js',
+          '.jsx'
+        ],
+        // https://cuneyt.aliustaoglu.biz/en/absolute-imports-and-intellisense-with-create-react-app/
+        'paths': ['assets']
+      }
+    },
+    'react': {
+      'version': 'detect',
+    }
+  },
+  'parserOptions': {
+    'ecmaVersion': 9,
+    'ecmaFeatures': {
+      'jsx': true
+    },
+    'sourceType': 'module'
+  },
+  'plugins': ['react', 'jest'],
   'rules': {
     // eslint
     'semi': ['error', 'never'],
@@ -44,7 +67,7 @@ module.exports = {
       allowTernary: false,
       allowTaggedTemplates: true
     }],
-    'no-unused-vars': ['error', {'args': 'after-used'}],
+    'no-unused-vars': 'off',
     'quotes': ['error', 'single'],
     'operator-linebreak': ['error', 'before'],
     'multiline-ternary': ['error', 'always-multiline'],
